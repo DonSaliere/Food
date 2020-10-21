@@ -1,6 +1,4 @@
-function timer() {
-	// Timer
-	const dedline = '2020-10-23';
+function timer(id, dedline) {
 
 	function getTimeRemaining(endtime) {
 		const t = Date.parse(endtime) - Date.parse(new Date()),
@@ -51,7 +49,7 @@ function timer() {
 		}
 	}
 
-	setClock('.timer', dedline);
+	setClock(id, dedline);
 }
 
-module.exports = timer;
+export default timer;
